@@ -1,0 +1,33 @@
+ <!-- Page Header -->
+ <header class="masthead" style="background-image: url('img/home-bg.jpg')">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="site-heading">
+          <h1>Clean Blog</h1>
+          <span class="subheading">A Blog Theme by Start Bootstrap</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+     {{postData.title}}
+      <form>
+          <div class="form-group">
+            <label>Title</label>
+            <input type="text" class="form-control" name="title" placeholder="Enter Title" [(ngModel)] = "postData.title">      
+          </div>
+          <div class="form-group">
+            <label>Description</label>
+            <textarea class="form-control" name="description" rows="3" [(ngModel)] = "postData.descrption"></textarea>
+          </div>      
+          <button type="submit" (click)="addPostData()" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+  </div>
+</div>
